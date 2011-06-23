@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B70C889D-3B60-469D-8475-23818353771C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FluentJdf</RootNamespace>
+    <AssemblyName>FluentJdf</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\FluentJdf.XML</DocumentationFile>
+    <CodeContractsEnableRuntimeChecking>False</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>False</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>False</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>False</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>True</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>False</CodeContractsCacheAnalysisResults>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Release\FluentJdf.XML</DocumentationFile>
+    <CodeContractsEnableRuntimeChecking>False</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>False</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>False</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>False</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>True</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>False</CodeContractsCacheAnalysisResults>
+    <CodeContractsRuntimeCheckingLevel>Preconditions</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>%28none%29</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\EncodingSettings.cs" />
+    <Compile Include="Configuration\EncodingSettingsBuilder.cs" />
+    <Compile Include="Configuration\HttpTransmissionSettings.cs" />
+    <Compile Include="Configuration\HttpTransmissionSettingsBuilder.cs" />
+    <Compile Include="Configuration\JdfAuthoringSettings.cs" />
+    <Compile Include="Configuration\JdfAuthoringSettingsBuilder.cs" />
+    <Compile Include="Configuration\TransmissionPartSettings.cs" />
+    <Compile Include="Configuration\TransmissionPartSettingsBuilder.cs" />
+    <Compile Include="Configuration\TransmitterSettings.cs" />
+    <Compile Include="Configuration\TransmitterSettingsBuilder.cs" />
+    <Compile Include="Encoding\IEncodingFactory.cs" />
+    <Compile Include="Encoding\EncodingFactory.cs" />
+    <Compile Include="Encoding\EncodingResult.cs" />
+    <Compile Include="Encoding\IEncoding.cs" />
+    <Compile Include="Encoding\ITransmissionPart.cs" />
+    <Compile Include="Encoding\ITransmissionPartCollection.cs" />
+    <Compile Include="Encoding\ITransmissionPartFactory.cs" />
+    <Compile Include="Encoding\IXmlTransmissionPart.cs" />
+    <Compile Include="Encoding\PassThroughEncoding.cs" />
+    <Compile Include="Encoding\TransmissionPart.cs" />
+    <Compile Include="Encoding\TransmissionPartCollection.cs" />
+    <Compile Include="Encoding\TransmissionPartFactory.cs" />
+    <Compile Include="Encoding\XmlTransmissionPart.cs" />
+    <Compile Include="Encoding\XmlType.cs" />
+    <Compile Include="LinqToJdf\AttributeExtensions.cs" />
+    <Compile Include="LinqToJdf\Audit.cs" />
+    <Compile Include="Configuration\Library.cs" />
+    <Compile Include="LinqToJdf\Command.cs" />
+    <Compile Include="LinqToJdf\ElementExtensions.cs" />
+    <Compile Include="LinqToJdf\Element.cs" />
+    <Compile Include="LinqToJdf\FluentJdfDocumentBase.cs" />
+    <Compile Include="LinqToJdf\IJdfNodeBuilder.cs" />
+    <Compile Include="LinqToJdf\IJmfCommandBuilder.cs" />
+    <Compile Include="LinqToJdf\IJmfNodeBuilderBase.cs" />
+    <Compile Include="LinqToJdf\IJmfSubmitQueueEntryCommandBuilder.cs" />
+    <Compile Include="LinqToJdf\IResourceNodeBuilder.cs" />
+    <Compile Include="LinqToJdf\JdfElementType.cs" />
+    <Compile Include="LinqToJdf\JdfNodeAttributeBuilder.cs" />
+    <Compile Include="LinqToJdf\JmfCommandBuilder.cs" />
+    <Compile Include="LinqToJdf\JmfCommandTypeBuilder.cs" />
+    <Compile Include="LinqToJdf\JmfElementExtensions.cs" />
+    <Compile Include="LinqToJdf\JmfMessageElementExtensions.cs" />
+    <Compile Include="LinqToJdf\JmfNodeBuilder.cs" />
+    <Compile Include="LinqToJdf\JmfNodeBuilderBase.cs" />
+    <Compile Include="LinqToJdf\JmfSubmitQueueEntryCommandAttributeBuilder.cs" />
+    <Compile Include="LinqToJdf\JmfSubmitQueueEntryCommandBuilder.cs" />
+    <Compile Include="LinqToJdf\Message.cs" />
+    <Compile Include="LinqToJdf\Globals.cs" />
+    <Compile Include="LinqToJdf\IJdfDifferenceListener.cs" />
+    <Compile Include="LinqToJdf\JdfDifferenceExtensions.cs" />
+    <Compile Include="LinqToJdf\JdfException.cs" />
+    <Compile Include="LinqToJdf\JdfNodeBuilder.cs" />
+    <Compile Include="LinqToJdf\JdfNodeBuilderBase.cs" />
+    <Compile Include="LinqToJdf\ProcessType.cs" />
+    <Compile Include="LinqToJdf\RefExtensions.cs" />
+    <Compile Include="LinqToJdf\Resource.cs" />
+    <Compile Include="LinqToJdf\ResourceNodeAttributeBuilder.cs" />
+    <Compile Include="LinqToJdf\ResourceNodeNameBuilder.cs" />
+    <Compile Include="LinqToJdf\ResourceNodeBuilder.cs" />
+    <Compile Include="LinqToJdf\Ticket.cs" />
+    <Compile Include="LinqToJdf\JdfElementExtensions.cs" />
+    <Compile Include="LinqToJdf\ResourceExtensions.cs" />
+    <Compile Include="LinqToJdf\ResourceUsage.cs" />
+    <Compile Include="LinqToJdf\XElementExtensions.cs" />
+    <Compile Include="LinqToJdf\XNameExtension.cs" />
+    <Compile Include="LinqToJdf\XPathDecorator.cs" />
+    <Compile Include="LinqToJdf\XPathExtensions.cs" />
+    <Compile Include="Messaging\JmfResult.cs" />
+    <Compile Include="Messaging\ReturnCode.cs" />
+    <Compile Include="Properties\CommonAssemblyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Schema\SchemaSet.cs" />
+    <Compile Include="Schema\ValidationMessage.cs" />
+    <Compile Include="Schema\ValidationMessageType.cs" />
+    <Compile Include="Schema\Validator.cs" />
+    <Compile Include="Transmission\HttpTransmitter.cs" />
+    <Compile Include="Transmission\HttpWebRequestFactory.cs" />
+    <Compile Include="Transmission\IHttpWebRequestFactory.cs" />
+    <Compile Include="Transmission\ITransmitter.cs" />
+    <Compile Include="Transmission\ITransmitterFactory.cs" />
+    <Compile Include="Transmission\TransmitterFactory.cs" />
+    <Compile Include="Messaging\IJmfResult.cs" />
+    <Compile Include="Utility\StringHelper.cs" />
+    <Compile Include="Utility\UniqueGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <EmbeddedResource Include="Resources\Schema\JDF.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Schema\JDFCapability.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Schema\JDFCore.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Schema\JDFMessage.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Schema\JDFProcess.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Schema\JDFResource.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Schema\JDFTypes.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.Core\Infrastructure.Core.csproj">
+      <Project>{941D0CE6-D735-47AD-8521-7171BCB2833A}</Project>
+      <Name>Infrastructure.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
