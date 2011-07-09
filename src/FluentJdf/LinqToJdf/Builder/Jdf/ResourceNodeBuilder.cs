@@ -1,32 +1,59 @@
 ﻿using System.Xml.Linq;
 using Infrastructure.Core.CodeContracts;
 
-namespace FluentJdf.LinqToJdf.Builder.Jdf
-{
+namespace FluentJdf.LinqToJdf.Builder.Jdf {
     /// <summary>
     /// 
     /// </summary>
     public class ResourceNodeBuilder : JdfNodeBuilderBase, IResourceNodeBuilder, IJdfNodeBuilder {
-        internal  ResourceNodeBuilder(JdfNodeBuilder parent, XName resourceName, ResourceUsage usage, string id = null) : base(parent) {
+        internal ResourceNodeBuilder(JdfNodeBuilder parent, XName resourceName, ResourceUsage usage, string id = null)
+            : base(parent) {
             ParameterCheck.ParameterRequired(resourceName, "resourceName");
 
-            Element =  ParentJdfNode.Element.LinkResource(usage, resourceName, id);
+            Element = ParentJdfNode.Element.LinkResource(usage, resourceName, id);
+        }
+
+        /// <summary>
+        /// Add any <see cref="XElement"/> to the JDFNode.
+        /// </summary>
+        /// <param name="element">The element to add.</param>
+        /// <returns></returns>
+        public GenericJdfBuilder AddNode(XElement element) {
+            ParameterCheck.ParameterRequired(element, "element");
+            Element.Add(element);
+            return new GenericJdfBuilder(this.ParentJdfNode, element);
+        }
+
+        /// <summary>
+        /// Add any named element to the JDFNode.
+        /// </summary>
+        /// <param name="name">The <see cref="XName"/> of the element to add.</param>
+        /// <returns></returns>
+        public GenericJdfBuilder AddNode(XName name) {
+            ParameterCheck.ParameterRequired(name, "name");
+            return AddNode(new XElement(name));
         }
 
         /// <summary>
         /// Gets the attribute setter for this node.
         /// </summary>
-        public ResourceNodeAttributeBuilder With() { return new ResourceNodeAttributeBuilder(this); }
+        public ResourceNodeAttributeBuilder With() {
+            return new ResourceNodeAttributeBuilder(this);
+        }
 
         /// <summary>
         /// Create an input
         /// </summary>
-        public ResourceNodeNameBuilder WithInput() { return ParentJdfNode.WithInput(); }
+        public ResourceNodeNameBuilder WithInput() {
+            return ParentJdfNode.WithInput();
+        }
 
         /// <summary>
         /// Creates an output.
         /// </summary>
-        public ResourceNodeNameBuilder WithOutput() { return ParentJdfNode.WithOutput(); }
+        public ResourceNodeNameBuilder WithOutput() {
+            return ParentJdfNode.WithOutput();
+        }
 
         /// <summary>
         /// Adds a new intent JDF.

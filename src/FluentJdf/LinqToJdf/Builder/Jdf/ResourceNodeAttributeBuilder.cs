@@ -15,6 +15,27 @@ namespace FluentJdf.LinqToJdf.Builder.Jdf {
         }
 
         /// <summary>
+        /// Add any <see cref="XElement"/> to the JDFNode.
+        /// </summary>
+        /// <param name="element">The element to add.</param>
+        /// <returns></returns>
+        public GenericJdfBuilder AddNode(XElement element) {
+            ParameterCheck.ParameterRequired(element, "element");
+            Element.Add(element);
+            return new GenericJdfBuilder(this.ParentJdfNode, element);
+        }
+
+        /// <summary>
+        /// Add any named element to the JDFNode.
+        /// </summary>
+        /// <param name="name">The <see cref="XName"/> of the element to add.</param>
+        /// <returns></returns>
+        public GenericJdfBuilder AddNode(XName name) {
+            ParameterCheck.ParameterRequired(name, "name");
+            return AddNode(new XElement(name));
+        }
+
+        /// <summary>
         /// Gets the resource node builder for this attribute builder.
         /// </summary>
         /// <returns></returns>
@@ -48,18 +69,24 @@ namespace FluentJdf.LinqToJdf.Builder.Jdf {
         /// <summary>
         /// Create an input
         /// </summary>
-        public ResourceNodeNameBuilder WithInput() { return new ResourceNodeNameBuilder(resourceNodeBuilder.ParentJdfNode, ResourceUsage.Input); }
+        public ResourceNodeNameBuilder WithInput() {
+            return new ResourceNodeNameBuilder(resourceNodeBuilder.ParentJdfNode, ResourceUsage.Input);
+        }
 
         /// <summary>
         /// Creates an output.
         /// </summary>
-        public ResourceNodeNameBuilder WithOutput() { return new ResourceNodeNameBuilder(resourceNodeBuilder.ParentJdfNode, ResourceUsage.Output); }
+        public ResourceNodeNameBuilder WithOutput() {
+            return new ResourceNodeNameBuilder(resourceNodeBuilder.ParentJdfNode, ResourceUsage.Output);
+        }
 
         /// <summary>
         /// Gets the ticket associated with this builder
         /// </summary>
         public Ticket Ticket {
-            get { return resourceNodeBuilder.Ticket; }
+            get {
+                return resourceNodeBuilder.Ticket;
+            }
         }
 
         /// <summary>
@@ -74,14 +101,18 @@ namespace FluentJdf.LinqToJdf.Builder.Jdf {
         /// Gets the Element and allows set for inheritors
         /// </summary>
         public XElement Element {
-            get { return resourceNodeBuilder.Element; }
+            get {
+                return resourceNodeBuilder.Element;
+            }
         }
 
         /// <summary>
         /// Gets the container JDF builder.
         /// </summary>
         public JdfNodeBuilder ParentJdfNode {
-            get { return resourceNodeBuilder.ParentJdfNode; }
+            get {
+                return resourceNodeBuilder.ParentJdfNode;
+            }
         }
     }
 }
