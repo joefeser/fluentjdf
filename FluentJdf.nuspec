@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>FluentJdf</id>
+    <title>Fluent JDF</title>
+    <projectUrl>http://fluentjdf.codeplex.com</projectUrl>
+    <iconUrl>http://www.onpointod.com/images/fluentjdficon.png</iconUrl>
+    <licenseUrl>http://fluentjdf.codeplex.com/license</licenseUrl>
+    <version>0.1.3</version>
+    <authors>Onpoint On Demand</authors>
+    <owners>Onpoint On Demand</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      Fluent JDF contains everything you need to quickly
+      add JDF capabilities to any client application.  It includes powerful tools
+      that allow you to easily author, parse and send JDF from your client applications.
+      This package uses Castle Windsor and NLog.  Support for log4net and other IoC
+      containers is coming soon.  If you have a favorite IoC container you would like
+      to see supported, let us know on the forums.
+    </description>
+    <summary>JDF Client Library for .NET (Debug)</summary>
+    <dependencies>
+      <dependency id="NLog" version="2.0.0.1904" />
+      <dependency id="Castle.Core" version="2.5.2" />
+      <dependency id="Castle.Windsor" version="2.5.3" />
+    </dependencies>
+    <tags>jdf fluent</tags>
+  </metadata>
+  <files>
+    <file src="BuildOutput\bin\FluentJdf\FluentJdf.dll" target="lib" />
+    <file src="BuildOutput\bin\FluentJdf\FluentJdf.xml" target="lib" />
+    <file src="BuildOutput\bin\FluentJdf\Infrastructure.Core.dll" target="lib" />
+    <file src="BuildOutput\bin\FluentJdf\Infrastructure.Container.CastleWindsor.dll" target="lib" />
+    <file src="BuildOutput\bin\FluentJdf\Infrastructure.Logging.NLog.dll" target="lib" />
+    <file src="BuildOutput\bin\FluentJdf\Castle.Core.dll" target="tools" />
+    <file src="BuildOutput\bin\FluentJdf\Castle.Windsor.dll" target="tools" />
+    <file src="BuildOutput\bin\FluentJdf\NLog.dll" target="tools" />
+    <file src="BuildOutput\bin\FluentJdf\FluentJdf.dll" target="tools" />
+    <file src="BuildOutput\bin\FluentJdf\Infrastructure.Core.dll" target="tools" />
+    <file src="BuildOutput\bin\FluentJdf\Infrastructure.Container.CastleWindsor.dll" target="tools" />
+    <file src="BuildOutput\bin\FluentJdf\Infrastructure.Logging.NLog.dll" target="tools" />
+    <file src="linqPad\FluentJdfSample.linq" target="tools" />
+  </files>
+</package>
